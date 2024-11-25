@@ -17,5 +17,6 @@ trigger ContactTrigger on Contact (after insert, after update, after delete, aft
                 system.debug('After_undelete we will call afterundeleteHandler');
                 ContactTriggerHandler.afterUndeleteHandler();
         }
+        
     }   
 }
