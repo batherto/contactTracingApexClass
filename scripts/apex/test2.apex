@@ -77,6 +77,5 @@ if(existingRecords != null && existingRecords.size() > 0){
     }
     system.debug('There are: '+duplicates.size()+' duplicates!');
     system.debug('the duplicates are: '+ duplicates);
-    
 
 }

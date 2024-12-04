@@ -3,8 +3,9 @@ public with sharing class ContactTriggerHandler {
         // create list of acconts we will update
         system.debug('Welcome to the after Insert Handler!');
         Set<Id> accountIds = new Set<Id>();
-        // loop over trigger.net and place ID into the4 AccIds set
+        // loop over trigger.new and place ID into the AccIds set
         // with the new Handler we will typecast the trigger.new  since we are in a sub-function 
+        // ------important!!!! --------------------------------
         // trigger.new outputs a list of SObjects so need to cast to what we want (contact)
 
         for(Contact con : (List<Contact>)Trigger.new) {
@@ -13,6 +14,7 @@ public with sharing class ContactTriggerHandler {
             }
 
         }
+        system.debug('content of AccountIDs is : '+accountIds);
         AccountContactService.updateActiveContacts(accountIds);
 
     }
@@ -53,6 +55,7 @@ public with sharing class ContactTriggerHandler {
                 }
     
             }
+            system.debug('content of AccountIDs is : '+accountIds);
             AccountContactService.updateActiveContacts(accountIds);
 
 
@@ -67,6 +70,7 @@ public with sharing class ContactTriggerHandler {
                         }
             
                     }
+                    system.debug('content of AccountIDs is : '+accountIds);
                     AccountContactService.updateActiveContacts(accountIds);
     }
 }

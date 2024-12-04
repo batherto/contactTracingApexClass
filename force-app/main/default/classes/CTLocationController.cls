@@ -44,4 +44,5 @@ public with sharing class CTLocationController {
             }
         return mapOfHealthStatusCount;
     }
+    
 }

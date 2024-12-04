@@ -1,5 +1,5 @@
 trigger ContactTrigger on Contact (after insert, after update, after delete, after undelete) {
-    
+       // now uses the trigger handler
         switch on Trigger.operationType {
             when AFTER_INSERT {
                 system.debug('After_insert we will call afterInsertHandler');

@@ -1,5 +1,5 @@
 public with sharing class CTPersonController {
-    
+    //opening comments
     public static String getToken(String mobileNum) {
         // generate a token which will be used to encrypt the mobile number
         // we are using the MD5 encryption algorithm and then encoding it to url safe

@@ -1,5 +1,6 @@
 public class Plotter {
 // This inner class manages the points
+// just a test class
     class Point {
         Double x;
         Double y;

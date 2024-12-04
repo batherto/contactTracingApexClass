@@ -1,5 +1,5 @@
 public with sharing class CTPeopleTracingController {
-
+  //  opening comments
     public Static List<People_Tracing__c> getTraces(String recordID){
         //query people tracing records where metches recoprID
         return [SELECT Id, Name, Contact_Date__c, Contact_Type__c, Person_1__c, Person_1__r.Health_Status__c, Person_1__r.Token__c, Person_2__c, Person_2__r.Health_Status__c

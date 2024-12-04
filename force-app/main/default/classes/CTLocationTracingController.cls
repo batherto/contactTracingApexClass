@@ -1,5 +1,5 @@
 public with sharing class CTLocationTracingController {
-    
+    // information comment
     public Static List<Location_Tracing__c> getVisitors(String locationId) {
         //query Location_Tracing__c for records matching locationId sort by Visit Date in Descending order
         // return list of location_Tracing records

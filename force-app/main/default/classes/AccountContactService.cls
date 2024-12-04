@@ -23,7 +23,7 @@ public with sharing class AccountContactService {
                 accToUpdate.add(acc);
             }
                 
-            // update the list of accounts
+            // and finally the update the list of accounts
             if (!Schema.sObjectType.Account.isUpdateable()){
                 System.debug('Insufficient Permissions');
                 }
