@@ -78,10 +78,11 @@ system.debug('-------------------------------------');
 
 
 // call the CTPersonController.cls and test getToken method
-/*
-String token = CTPersonController.getToken('20000000');
+
+String token = CTPersonController.getToken('200-000-0000');
+system.debug('------------Token---------------------');
 system.debug(token);
-system.debug('Testing the getHealthChanges method')
+system.debug('Testing the getHealthChanges method');
 system.debug(CTPersonController.getRecentHealthChanges());
-*/
+
 

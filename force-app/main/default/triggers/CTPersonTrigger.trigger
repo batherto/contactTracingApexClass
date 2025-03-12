@@ -1,8 +1,12 @@
-trigger PersonTrigger on Person__c (after insert, before insert, after update, after delete, after undelete) {
+trigger CTPersonTrigger on Person__c (after insert, before insert, before update, after update, after delete, after undelete) {
     switch on Trigger.operationType {
         when BEFORE_INSERT {
-            system.debug('After_insert we will call beforeInsertHandler');
-            //ContactTriggerHandler.afterInsertHandler();
+            system.debug('before insert we will call beforeInsertHandler');
+            CTPersonTriggerHandler.beforeInsertHandler();
+        }
+        when BEFORE_UPDATE {
+            system.debug('Before Update we will call beforeUpdateHandler');
+            CTPersonTriggerHandler.beforeUpdateHandler();
         }
         when AFTER_INSERT {
             system.debug('After_insert we will call afterInsertHandler');
