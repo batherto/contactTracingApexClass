@@ -1,2 +1,2 @@
 Plotter myPlot = new Plotter(1,2);
-Systenm.debug('Myplot data = '+myPlot);
+System.debug('Myplot data = '+myPlot);

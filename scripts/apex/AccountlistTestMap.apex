@@ -1,7 +1,5 @@
-// this is a map version of the accountlisttest This code should likely be the same
-
 system.debug('------------- Begin Testing -----------');
-List<Account> accountsIDs = [SELECT Id FROM Account LIMIT 2];
+List<Account> accountsIDs = [SELECT Id FROM Account LIMIT 4];
 List<Id> iDlist = new List<Id>();
 System.debug('List of Accounts = '+accountsIDs);
 // loop over accountsIDs and place the ID's into iDlist
@@ -9,8 +7,4 @@ for(Account a :accountsIDs){
     iDlist.add(a.Id);
 }
 System.debug('List of IDs to send to class = '+iDlist);
-
-// call the AccountController2 class and test the method
-AccountController2.updateAvgCaseResolutionDays(iDlist);
-
-System.debug('End of the calling apex');
+AccountController3Map.updateAvgCaseResolutionDays(iDlist);

@@ -3,4 +3,12 @@
 //     query text and running the command:
 //     SFDX: Execute SOQL Query with Currently Selected Text
 
-SELECT Id, Name FROM Account;
+//SELECT Id FROM Account LIMIT 10
+SELECT Id, CreatedDate, ClosedDate, AccountId,subject, Account.Name
+FROM Case
+WHERE IsClosed=true
+AND AccountId IN ('0013u00000vUKTwAAO', '0016A00000MSQElQAP','0016A00000MlsLkQAJ')
+
+
+
+SELECT Id,Name FROM Account LIMIT 4
